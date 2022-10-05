@@ -1,0 +1,35 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.Game.Protos";
+
+package game;
+
+
+
+//||||||||||||||||||||||||||||||||\\
+//		    PROTO MODELS		  \\
+//||||||||||||||||||||||||||||||||\\
+
+message GameProto{
+	 int32 id = 1;
+     string url = 2;
+     string name = 3;
+     string description = 4;
+     string shortDescription = 5;
+     string bigLogo = 6;
+     string smallLogo = 7;
+     int32 ownerId = 8;
+     string realeseDate = 9;
+}
+
+//Model for the game list (reduced weight).
+message GameSimpleProto{ 
+	 int32 id = 1;
+     string url = 2;
+     string name = 3;
+     string shortDescription = 4;
+     string smallLogo = 5;
+     string realeseDate = 6;
+}
+
+//================================//

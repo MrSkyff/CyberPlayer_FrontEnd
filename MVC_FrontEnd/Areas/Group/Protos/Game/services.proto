@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "Areas/Group/Protos/Game/actions.proto";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.Group.Protos.Game";
+
+package game;
+
+
+
+////////////////////////////////////
+//			  SERVICES			  //
+////////////////////////////////////
+
+service GroupToGame{
+	rpc GetGameListByGroupId (GameListByGroupIdRequest) returns (GameListByGroupIdResponse);
+}

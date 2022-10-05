@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+//import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "MVC_Admin.Areas.Game.Protos";
+
+package game;
+
+
+
+//||||||||||||||||||||||||||||||||\\
+//		    PROTO MODELS		  \\
+//||||||||||||||||||||||||||||||||\\
+
+message GameProto{
+	 int32 id = 1;
+     string url = 2;
+     string name = 3;
+     string description = 4;
+     string shortDescription = 5;
+     string bigLogo = 6;
+     string smallLogo = 7;
+     int32 ownerId = 8;
+     string realeseDate = 9;
+}
+
+//Model for the game list (reduced weight).
+message GameSimpleProto{ 
+	 int32 id = 1;
+     string url = 2;
+     string name = 3;
+     string shortDescription = 4;
+     string smallLogo = 5;
+     string realeseDate = 6;
+}
+
+message PaginatorGameProto{
+        int32 currentPage = 1;
+        int32 pageSize = 2;
+        int32 pagesCountToShow = 3;
+        repeated int32 pageList = 4;
+}

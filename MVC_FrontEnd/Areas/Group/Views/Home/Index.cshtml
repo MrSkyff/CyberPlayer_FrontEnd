@@ -1,0 +1,8 @@
+﻿@model IEnumerable<MVC_FrontEnd.Areas.Group.Models.GroupModel>
+
+    <h1>Group area</h1>
+
+    @foreach (var item in Model)
+    {
+        <div><a asp-area="Group" asp-controller="Home" asp-action="Group" asp-route-id="@item.Id">@item.Name</a></div>
+    }

@@ -1,0 +1,156 @@
+﻿@model MVC_FrontEnd.Areas.Game.ViewModels.GameListViewModel
+@{
+
+}
+
+
+<div id="content" class="app-content">
+
+    <div class="row gx-4">
+        <div class="d-flex align-items-center mb-3">
+            <div>
+                <h1 class="page-header mb-0"> <i class="fas fa-gamepad"></i> Games</h1>
+            </div>
+        </div>
+        <hr class="my-6" />
+        <div class="col-lg-12">
+
+            <div class="row">
+                @foreach (var item in Model.Games)
+                {
+                    <div class="col-xl-3">
+                        <div class="card mb-3 bg-black bg-opacity-25">
+                            <div class="card-body pb-0">
+                                <img src="@item.SmallLogo" alt="" class="card-img-top">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">@item.Name</h5>
+                                <p class="card-text">@item.ShortDescription</p>
+                                <a asp-area="game" asp-controller="home" asp-action="game" asp-route-id="@item.Id" class="text-teal text-decoration-none">Read more <i class="fas fa-forward"></i> </a>
+                            </div>
+                            <div class="card-arrow">
+                                <div class="card-arrow-top-left"></div>
+                                <div class="card-arrow-top-right"></div>
+                                <div class="card-arrow-bottom-left"></div>
+                                <div class="card-arrow-bottom-right"></div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- BEGIN pagination -->
+            @await Html.PartialAsync("_GameListPagingParcial", Model)
+            <!-- END pagination -->
+
+        </div>
+
+        @*    <div class="col-lg-3">
+
+        <div class="card mb-4 ">
+        <div class="card-header d-flex align-items-center bg-white bg-opacity-15 fw-400">
+        Notes
+        <a href="#" class="ms-auto text-decoration-none text-white text-opacity-50">Edit</a>
+        </div>
+        <div class="card-body bg-black bg-opacity-25">
+        No notes from customer
+        </div>
+        <div class="card-arrow">
+        <div class="card-arrow-top-left"></div>
+        <div class="card-arrow-top-right"></div>
+        <div class="card-arrow-bottom-left"></div>
+        <div class="card-arrow-bottom-right"></div>
+        </div>
+        </div>
+
+        <div class="desktop-sticky-top d-none d-lg-block">
+
+        <div class="card mb-4 ">
+        <div class="card-header d-flex align-items-center bg-white bg-opacity-15 fw-400">
+        Notes
+        <a href="#" class="ms-auto text-decoration-none text-white text-opacity-50">Edit</a>
+        </div>
+        <div class="card-body bg-black bg-opacity-25">
+        No notes from customer
+        </div>
+        <div class="card-arrow">
+        <div class="card-arrow-top-left"></div>
+        <div class="card-arrow-top-right"></div>
+        <div class="card-arrow-bottom-left"></div>
+        <div class="card-arrow-bottom-right"></div>
+        </div>
+        </div>
+
+        </div>
+
+        </div>*@
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div class="col-lg-9">
+
+    <div class="main-wraper">
+        <div class="main-title">Game list</div>
+        <div class="row">
+           
+
+            @if (Model.Count() > 0 && Model.ToList()[0].Id == 0)
+            {
+                <div class="center">The service is temporarily unavailable</div>
+            }
+            else if (Model.Count() == 0)
+            {
+                <center><h4>Game list is empty</h4></center>
+            }
+            else
+            {
+                @foreach (var item in Model)
+                {
+
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="event-post mb-3">
+
+                            <figure>
+                                <a asp-area="Game" asp-controller="Home" asp-action="Game" asp-route-id="@item.Id">
+                                    <img src="@item.SmallLogo" alt="" />
+                                </a>
+                            </figure>
+
+                            <div class="event-meta">
+                                <h6><a asp-area="Game" asp-controller="Home" asp-action="Game" asp-route-id="@item.Id">@item.Name</a></h6>
+                                <p> servers: 132 | Groups: 21</p>
+                                <a asp-area="Game" asp-controller="Home" asp-action="Game" asp-route-id="@item.Id">Read more</a>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>*@
+
+
+

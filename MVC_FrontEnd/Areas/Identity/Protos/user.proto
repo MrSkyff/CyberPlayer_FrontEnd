@@ -1,0 +1,34 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "MVC_FrontEnd";
+
+package model;
+
+
+
+message UserProto{
+	int32 id = 1;
+	string userName = 2;
+	string firstName = 3;
+	string lastName = 4;
+	string email = 5;
+	bool emailConfirmed = 6;
+}
+
+message UserListProto{
+	repeated UserProto users = 1;
+}
+
+message RoleProto{
+	int32 id = 1;
+	string name = 2;
+}
+
+message UserRolesProto{
+	int32 userId = 1;
+	int32 roleId = 2;
+}
+
+message LoginViewProto{
+	string email = 1;
+}

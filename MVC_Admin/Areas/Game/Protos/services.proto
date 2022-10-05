@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+import "Areas/Game/Protos/actions.proto";
+
+option csharp_namespace = "MVC_Admin.Areas.Game.Protos";
+
+package game;
+
+
+
+//////////////////////////\\
+//        SERVICES        \\
+//////////////////////////\\
+
+service Game{
+	rpc GetGameList (GameListRequest) returns (GameListResponse);
+	rpc GetGameById (GameByIdRequest) returns (GameByIdResponse);
+
+	rpc CreateGame (CreateGameRequest) returns (CreateGameResponse);
+	rpc UpdateGame (UpdateGameRequest) returns (UpdateGameResponse);
+ }

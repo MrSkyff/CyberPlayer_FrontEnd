@@ -1,0 +1,58 @@
+﻿@model GameModel
+
+<form method="post" enctype="multipart/form-data">
+
+    <div>
+        <label asp-for="Name"></label>
+        <input asp-for="Name"/>
+    </div>
+
+    <div>
+        <label asp-for="Url"></label>
+        <textarea asp-for="Url"></textarea>
+    </div>
+
+    <div>
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description"></textarea>
+    </div>
+
+    <div>
+        <label asp-for="ShortDescription"></label>
+        <textarea asp-for="ShortDescription"></textarea>
+    </div>
+
+    <div>
+        <label asp-for="BigLogo"></label>
+        <input asp-for="BigLogo" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="BigLogoFile"></label>
+        <input asp-for="BigLogoFile" type="file" />
+    </div>
+
+    <div>
+        <label asp-for="SmallLogo"></label>
+        <input asp-for="SmallLogo" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SmallLogoFile"></label>
+        <input asp-for="SmallLogoFile" type="file" />
+    </div>
+
+    <div>
+        <label asp-for="OwnerId"></label>
+        <textarea asp-for="OwnerId"></textarea>
+    </div>
+
+    <div>
+        <label asp-for="RealeseDate"></label>
+        <input asp-for="RealeseDate" id="datetime" class="form-control" type="text" />
+    </div>
+
+
+    <input type="submit" value="Update game"/>
+
+</form>

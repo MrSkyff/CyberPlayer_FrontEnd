@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "Areas/News/Protos/actions.proto";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.News.Protos";
+
+package news;
+
+
+
+//||||||||||||||||||||||||||||||||\\
+//			  SERVICES			  \\
+//||||||||||||||||||||||||||||||||\\
+
+service News{
+	rpc GetNewsByGame (NewsListByGameRequest) returns (NewsListByGameResponse);
+	rpc GetNewsList (NewsListRequest) returns (NewsListResponse);
+	rpc GetNewsById (NewsByIdRequest) returns (NewsByIdResponse);
+}

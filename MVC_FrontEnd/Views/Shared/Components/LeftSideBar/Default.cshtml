@@ -1,0 +1,64 @@
+﻿<!-- BEGIN #sidebar -->
+<div id="sidebar" class="app-sidebar">
+
+
+    <!-- BEGIN scrollbar -->
+    <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
+        <!-- BEGIN menu -->
+        <div class="menu">
+            <div class="menu-header">Navigation</div>
+            <div class="menu-item">
+                <a asp-area="Design" asp-controller="Home" asp-action="Index" class="menu-link">
+                    <span class="menu-icon"><i class="bi bi-cpu"></i></span>
+                    <span class="menu-text">Index1</span>
+                </a>
+            </div>
+            <div class="menu-item active">
+                <a asp-area="Design" asp-controller="Home" asp-action="Index2" class="menu-link">
+                    <span class="menu-icon"><i class="bi bi-bar-chart"></i></span>
+                    <span class="menu-text">Index2</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a asp-area="Design" asp-controller="Home" asp-action="Index3" class="menu-link">
+                    <span class="menu-icon"><i class="bi bi-bar-chart"></i></span>
+                    <span class="menu-text">Index3</span>
+                </a>
+            </div>
+
+            <div class="menu-item has-sub active">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="bi bi-envelope"></i>
+                    </span>
+                    <span class="menu-text">Email</span>
+                    <span class="menu-caret"><b class="caret"></b></span>
+                </a>
+                <div class="menu-submenu">
+                    <div class="menu-item active">
+                        <a href="email_inbox.html" class="menu-link">
+                            <span class="menu-text">Inbox</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="email_compose.html" class="menu-link">
+                            <span class="menu-text">Compose</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="email_detail.html" class="menu-link">
+                            <span class="menu-text">Detail</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- END menu -->
+
+    </div>
+    <!-- END scrollbar -->
+
+
+</div>
+<!-- END #sidebar -->

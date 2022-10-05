@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "Areas/Group/Protos/Sever/actions.proto";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.Group.Protos.Server";
+
+package server;
+
+
+
+////////////////////////////////////
+//			  SERVICES			  //
+////////////////////////////////////
+
+
+service GroupToServer{
+	rpc GetServerListByGroupId (ServerListByGroupIdRequest) returns (ServerListByGroupIdResponse);
+}

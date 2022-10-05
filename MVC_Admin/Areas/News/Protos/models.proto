@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "MVC_Admin.Protos.News";
+
+package news;
+
+
+
+//||||||||||||||||||||||||||||||||\\
+//		    PROTO MODELS		  \\
+//||||||||||||||||||||||||||||||||\\
+
+message NewsProto{
+    int32 id = 1;
+    string title = 2;
+    string text = 3;
+    string shortText = 4;
+    string bigLogo = 5;
+    string smallLogo = 6;
+    int32 authorId = 7;
+    //google.protobuf.Timestamp postDate = 8;
+    int32 newsType = 9;
+}
+message NewsSimpleProto{
+    int32 id = 1;
+    string title = 2;
+    string shortText = 4;
+    string smallLogo = 6;
+    int32 authorId = 7;
+    //google.protobuf.Timestamp postDate = 8;
+    int32 newsType = 9;
+}

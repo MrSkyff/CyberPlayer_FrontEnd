@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "Areas/Group/Protos/Sever/models.proto";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.Group.Protos.Server";
+
+package server;
+
+
+
+////////////////////////////////////
+//			 RPC ACTIONS		  //
+////////////////////////////////////
+
+message ServerListByGroupIdRequest{
+	int32 id = 1;
+}
+message ServerListByGroupIdResponse{
+	repeated ServerSimpleProto  servers = 1;
+}

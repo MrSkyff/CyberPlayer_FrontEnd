@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.News.Protos";
+
+package news;
+
+
+
+//||||||||||||||||||||||||||||||||\\
+//		    PROTO MODELS		  \\
+//||||||||||||||||||||||||||||||||\\
+
+message NewsProto{
+	int32 id = 1;
+	string title = 2;
+	string text = 3; 
+	string shortText = 4;
+	string logo = 5;
+	int32 authorId = 6;
+	string postDate = 7;
+	int32 newsType = 8;
+	int32 gameId = 9;
+}
+
+message NewsSimpleProto{
+	int32 id = 1;
+	string title = 2;
+	string shortText = 3;
+	int32 authorId = 4;
+	string postDate = 5;
+	int32 newsType = 6;
+	int32 gameId = 7;
+}
+
+message PaginatorNewsProto{	        
+	int32 currentPage = 1;
+    int32 pageSize = 2;
+    int32 pagesCountToShow = 3;
+    repeated int32 pageList = 4;
+}

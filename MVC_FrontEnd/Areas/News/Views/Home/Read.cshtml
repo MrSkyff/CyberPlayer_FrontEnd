@@ -1,0 +1,67 @@
+﻿@model MVC_FrontEnd.Areas.News.Models.NewsModel
+
+<div id="content" class="app-content">
+
+    <div class="row gx-4">
+        <div class="d-flex align-items-center mb-3">
+            <div>
+                <h1 class="page-header mb-0"> <i class="fas fa-gamepad"></i> @Model.Title</h1>
+            </div>
+        </div>
+        <hr style="margin-bottom: 1px;" class="my-6" />
+
+        <div class="row gx-4">
+            <div class="col-lg-9">
+                <div class="d-flex align-items-top mb-6">
+                    <ol style="margin-top: 1rem; margin-left: 1rem;" class="breadcrumb">
+                        <li class="breadcrumb-item"><a asp-area="news" asp-controller="home" asp-action="index"> NEWS</a></li>
+                        <li class="breadcrumb-item active">@Model.Title.ToUpper()</li>
+                    </ol>
+
+                </div>
+            </div>
+            <div align="right" class="col-lg-3">
+                <button type="button" style="margin-top: 0.6rem; margin-right: 1rem;" class="btn btn-outline-theme btn-sm "> Buy on STEAM <i class="fab fa-lg fa-fw me-0 fa-steam-symbol"></i></button>
+            </div>
+        </div>
+
+        <div class="col-lg-9">
+
+                <div class="card mb-4 ">
+                    <div class="card-body bg-black bg-opacity-25">
+
+                    @Html.Raw(Model.Text)
+
+
+                    </div>
+
+                    <div class="card-arrow">
+                        <div class="card-arrow-top-left"></div>
+                        <div class="card-arrow-top-right"></div>
+                        <div class="card-arrow-bottom-left"></div>
+                        <div class="card-arrow-bottom-right"></div>
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="col-lg-3">
+            <div class="card mb-4 ">
+                <div class="card-body bg-black bg-opacity-25">
+
+                    <div>Blok navigation</div>
+
+
+                </div>
+
+                <div class="card-arrow">
+                    <div class="card-arrow-top-left"></div>
+                    <div class="card-arrow-top-right"></div>
+                    <div class="card-arrow-bottom-left"></div>
+                    <div class="card-arrow-bottom-right"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

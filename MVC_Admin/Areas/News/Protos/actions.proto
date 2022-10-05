@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+import "Areas/News/Protos/models.proto";
+
+option csharp_namespace = "MVC_Admin.Protos.News";
+
+package news;
+
+
+
+//||||||||||||||||||||||||||||||||\\
+//			 RPC ACTIONS		  \\
+//||||||||||||||||||||||||||||||||\\
+
+message NewsListRequest{	}
+message NewsListResponse{
+	repeated NewsSimpleProto newsList = 1;
+}
+
+message NewsByIdRequest{
+	int32 id = 1;
+}
+message NewsByIdResponse{
+	repeated NewsProto news = 1;
+}
+
+message NewsCreateRequest{
+	NewsProto news = 1;
+}
+message NewsCreateResponse{
+	NewsProto news = 1;
+}
+
+message NewsUpdateRequest{
+	NewsProto news = 1;
+}
+message NewsUpdateResponse{
+	NewsProto news = 1;
+}

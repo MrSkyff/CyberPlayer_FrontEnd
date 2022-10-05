@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+import "Areas/News/Protos/models.proto";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.News.Protos";
+
+package news;
+
+
+
+//||||||||||||||||||||||||||||||||\\
+//			 RPC ACTIONS		  \\
+//||||||||||||||||||||||||||||||||\\
+
+// ======= News list by game id =========
+message NewsListByGameRequest{
+	int32 id = 1;
+}
+message NewsListByGameResponse{
+	repeated NewsSimpleProto newsList = 1;
+}
+
+// =========== News list ================
+message NewsListRequest{
+	PaginatorNewsProto pagedNews = 1;
+}
+message NewsListResponse{
+	repeated NewsSimpleProto newsList = 1;
+	PaginatorNewsProto pagedNews = 2;
+}
+
+// ======== News by id ==============
+message NewsByIdRequest{
+	int32 id = 1;
+}
+message NewsByIdResponse{
+	NewsProto news = 1;
+}

@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+import "Areas/Group/Protos/Group/models.proto";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.Group.Protos.Group";
+
+package group;
+
+
+
+////////////////////////////////////
+//			 RPC ACTIONS		  //
+////////////////////////////////////
+
+message GroupListRequest{
+
+}
+message GroupListResponse{
+	repeated GroupSimpleProto groups = 1;
+}
+
+message GroupByIdRequest{
+	int32 id = 1;
+}
+message GroupByIdResponse{
+	GroupProto group = 1;
+}

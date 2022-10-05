@@ -1,0 +1,15 @@
+﻿@model MVC_FrontEnd.Areas.Group.ViewModels.GroupViewModel
+
+<h1>@Model.Group.Name</h1>
+<p>@Model.Group.Description</p>
+<hr/>
+
+<b>Games</b>
+<br/>
+@foreach (var item in Model.Games)
+{
+ <div>@item.Name</div>   
+}
+
+<b>Game servers</b>
+<br/>

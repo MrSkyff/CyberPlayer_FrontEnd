@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+import "Areas/Group/Protos/Game/models.proto";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.Group.Protos.Game";
+
+package game;
+
+
+
+////////////////////////////////////
+//			 RPC ACTIONS		  //
+////////////////////////////////////
+
+message GameListByGroupIdRequest{
+
+}
+message GameListByGroupIdResponse{
+	repeated GameSimpleProto games = 1;
+}

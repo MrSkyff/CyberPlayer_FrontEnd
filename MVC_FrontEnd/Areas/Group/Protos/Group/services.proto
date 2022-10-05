@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+import "Areas/Group/Protos/Group/actions.proto";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.Group.Protos.Group";
+
+package group;
+
+
+
+////////////////////////////////////
+//			  SERVICES			  //
+////////////////////////////////////
+
+service GroupToGroup{
+	rpc GetGroupList (GroupListRequest) returns (GroupListResponse);
+	rpc GetGroupById (GroupByIdRequest) returns (GroupByIdResponse);
+}

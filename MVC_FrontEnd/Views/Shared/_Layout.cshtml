@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Cyber games</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="~/templates/cyber_dark/css/vendor.min.css" rel="stylesheet" />
+	<link href="~/templates/cyber_dark/css/app.min.css" rel="stylesheet" />
+	<!-- ================== END core-css ================== -->
+
+</head>
+
+<body class="pace-top">
+
+	<!-- BEGIN #app -->
+	<div id="app" class="app app-boxed-layout app-sidebar-collapsed">
+
+		@await Component.InvokeAsync("TopBar")
+
+		@await Component.InvokeAsync("LeftSideBar")
+
+		<!-- BEGIN mobile-sidebar-backdrop -->
+		<button class="app-sidebar-mobile-backdrop" data-toggle-target=".app" data-toggle-class="app-sidebar-mobile-toggled"></button>
+		<!-- END mobile-sidebar-backdrop -->
+		@RenderBody()
+
+		<!-- Footer start -->
+		<div class="text-center small text-white text-opacity-50">
+			&copy; 2022 CyberGaming.Club All right reserved<br><br>
+		</div>
+		<!-- Footer end -->
+		<!-- BEGIN btn-scroll-top -->
+		<a href="#" data-toggle="scroll-to-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+		<!-- END btn-scroll-top -->
+
+
+
+	</div>
+
+	<!-- END #app -->
+	<!-- ================== BEGIN core-js ================== -->
+	@*	<script src="~/assets/js/vendor.min.js"></script>*@
+	<script src="~/templates/cyber_dark/js/app.min.js"></script>
+	<!-- ================== END core-js ================== -->
+	<!-- OR without vendor.min.js -->
+	@*<script src="~/assets/plugins/pace-js/pace.min.js"></script>*@
+	<script src="~/templates/cyber_dark/plugins/jquery/dist/jquery.min.js"></script>
+	<script src="~/templates/cyber_dark/plugins/jquery-ui-dist/jquery-ui.min.js"></script>
+	<script src="~/templates/cyber_dark/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/templates/cyber_dark/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+	<script src="~/templates/cyber_dark/plugins/js-cookie/dist/js.cookie.min.js"></script>
+	<script src="~/templates/cyber_dark/js/app.min.js"></script>
+
+	<!-- ================== BEGIN page-js ================== -->
+	<script src="~/templates/cyber_dark/plugins/@@highlightjs/cdn-assets/highlight.min.js"></script>
+	<script src="~/templates/cyber_dark/js/demo/highlightjs.demo.js"></script>
+	<!-- ================== END page-js ================== -->
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.Group.Protos.Group";
+
+package group;
+
+
+
+////////////////////////////////////
+//		    PROTO MODELS		  //
+////////////////////////////////////
+
+message GroupProto{
+	int32 id = 1;
+	string name = 2;
+	string descriptions = 3;
+}
+message GroupSimpleProto{
+	int32 id = 1;
+	string name = 2;
+}

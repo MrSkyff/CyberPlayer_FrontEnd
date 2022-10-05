@@ -1,0 +1,16 @@
+﻿@model GameListViewModel
+
+
+@foreach (var item in Model.Games)
+{
+    <div><a asp-area="Game" asp-controller="Home" asp-action="GameView" asp-route-id="@item.Id">@item.Name</a> <a asp-area="Game" asp-controller="Home" asp-action="UpdateGame" asp-route-id="@item.Id">EDIT</a></div>
+}
+<div><a asp-area="Game" asp-controller="Home" asp-action="CreateGame">Create game</a></div>
+
+
+
+<div>PAGINATOR at work</div>
+@foreach (var item in Model.Paginator.PageList)
+{
+     @item 
+}

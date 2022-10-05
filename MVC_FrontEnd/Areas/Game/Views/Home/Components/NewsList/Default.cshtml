@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MVC_FrontEnd.Areas.News.Models.NewsSimpleModel>
+
+
+<div class="search-result">
+	<!-- BEGIN search-result-list -->
+	<div class="search-result-list">
+
+
+
+		@foreach (var item in Model)
+		{
+			<div class="search-result-item">
+				<di class="search-result-content">
+					<h3><a asp-area="news" asp-controller="home" asp-action="news" asp-route-id="@item.Id">@item.Title</a></h3>
+					<p>@item.ShortText</p>
+					<a asp-area="news" asp-controller="home" asp-action="news" asp-route-id="@item.Id">Read more</a>
+				</di>
+			</div>
+		}
+
+
+
+	</div>
+	<!-- END search-result-list -->
+	<!-- BEGIN pagination -->
+	<div class="text-center mt-4 mb-5">
+		<div class="pagination justify-content-center">
+			<div class="disabled page-item">
+				<a href="#" class="page-link">
+					<span>«</span>
+				</a>
+			</div>
+			<div class="active page-item"><a href="#" class="page-link">1</a></div>
+			<div class="page-item"><a href="#" class="page-link">2</a></div>
+			<div class="page-item"><a href="#" class="page-link">3</a></div>
+			<div class="page-item"><a href="#" class="page-link">4</a></div>
+			<div class="page-item"><a href="#" class="page-link">5</a></div>
+			<div class="page-item">
+				<a href="#" class="page-link">
+					<span>»</span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- END pagination -->
+</div>

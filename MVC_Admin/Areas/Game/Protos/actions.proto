@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+import "Areas/Game/Protos/models.proto";
+
+option csharp_namespace = "MVC_Admin.Areas.Game.Protos";
+
+package game;
+
+
+
+//||||||||||||||||||||||||||||||||\\
+//			 RPC ACTIONS		  \\
+//||||||||||||||||||||||||||||||||\\
+
+
+//============== GAME LIST ==================\\
+message GameListRequest{
+	PaginatorGameProto paginator = 1;
+}
+message GameListResponse{
+	repeated GameSimpleProto games = 1;
+	PaginatorGameProto paginator = 2;
+}
+
+//=============== GAME BY ID =================\\
+message GameByIdRequest{
+	int32 id = 1;
+}
+message GameByIdResponse{
+	GameProto game = 1;
+}
+
+//=========== CRUD =============\\
+
+message CreateGameRequest{
+	GameProto game = 1;
+}
+message CreateGameResponse{
+	int32 gameId = 1;
+}
+
+message UpdateGameRequest{
+	GameProto game = 1;
+}
+message UpdateGameResponse{
+	GameProto game = 1;
+}

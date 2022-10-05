@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option csharp_namespace = "MVC_FrontEnd.Areas.Group.Protos.Game";
+
+package game;
+
+
+
+////////////////////////////////////
+//		    PROTO MODELS		  //
+////////////////////////////////////
+
+message GameSimpleProto{
+	int32 id = 1;
+	string name = 2;
+}

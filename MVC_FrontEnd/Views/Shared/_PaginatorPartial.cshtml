@@ -1,0 +1,61 @@
+﻿@model MVC_FrontEnd.Services.Paginator.PaginatorModel
+
+
+<!--Paginator start-->
+<div class="text-center mt-4 mb-5">
+    <div class="pagination justify-content-center">
+
+        <!-- Previous pages -->
+        @if (Model.CurrentPage <= 1)
+        {
+            <div class="disabled page-item">
+                <a class="page-link" asp-area="news" asp-controller="home" asp-action="index" asp-route-currentpage="@(Model.CurrentPage-1)" asp-route-pagesize="@Model.PageSize">
+                    <span>«</span>
+                </a>
+            </div>
+        }
+        else
+        {
+            <div class="page-item">
+                <a class="page-link" asp-area="news" asp-controller="home" asp-action="index" asp-route-currentpage="@(Model.CurrentPage-1)" asp-route-pagesize="@Model.PageSize">
+                    <span>«</span>
+                </a>
+            </div>
+        }
+        <!-- Previous pages END -->
+        <!-- Selected pages -->
+        @foreach (var item in Model.PageList)
+        {
+            if (item == Model.CurrentPage)
+            {
+                <div class="active page-item"><a asp-area="news" asp-controller="home" asp-action="index" asp-route-currentpage="@(item)" asp-route-pagesize="@Model.PageSize" class="page-link">@(item)</a></div>
+
+            }
+            else
+            {
+                <div class="page-item"><a asp-area="news" asp-controller="home" asp-action="index" asp-route-currentpage="@(item)" asp-route-pagesize="@Model.PageSize" class="page-link">@(item)</a></div>
+
+            }
+        }
+
+        @if (Model.CurrentPage >= Model.PageList.LastOrDefault())
+        {
+            <div class="disabled page-item">
+                <a class="page-link" asp-area="news" asp-controller="home" asp-action="index" asp-route-currentpage="@(Model.CurrentPage+1)" asp-route-pagesize="@Model.PageSize">
+                    <span>»</span>
+                </a>
+            </div>
+        }
+        else
+        {
+            <div class="page-item">
+                <a class="page-link" asp-area="news" asp-controller="home" asp-action="index" asp-route-currentpage="@(Model.CurrentPage+1)" asp-route-pagesize="@Model.PageSize">
+                    <span>»</span>
+                </a>
+            </div>
+        }
+        <!-- News pages END -->
+
+    </div>
+</div>
+<!--Paginator end-->
